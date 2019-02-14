@@ -1,0 +1,288 @@
+Converting GML script: ${project_dir}\scripts\scRight\scRight.gml
+Converted description /// @description scRight(tempSkid,tempVxMax,tempAccel)/// @function scRight
+/// @param tempSkid
+/// @param tempVxMax
+/// @param tempAccel
+
+Converting GML script: ${project_dir}\scripts\scLeft\scLeft.gml
+Converted description /// @description scLeft(tempSkid,tempVxMax,tempAccel)/// @function scLeft
+/// @param tempSkid
+/// @param tempVxMax
+/// @param tempAccel
+
+Converting GML script: ${project_dir}\scripts\scStatic\scStatic.gml
+Converted description /// @description scStatic(tempSkid,tempVxMax,tempAccel)/// @function scStatic
+/// @param tempSkid
+/// @param tempVxMax
+/// @param tempAccel
+
+Converting GML script: ${project_dir}\scripts\scLedgeCheck\scLedgeCheck.gml
+Converted description /// @description scLedgeCheck(facing)/// @function scLedgeCheck
+/// @param facing
+
+Converting GML script: ${project_dir}\scripts\scLedgeCheckBrick\scLedgeCheckBrick.gml
+Converted description /// @description scLedgeCheck(facing)/// @function scLedgeCheck
+/// @param facing
+
+Converting GML script: ${project_dir}\scripts\Approach\Approach.gml
+Converted description /// @description  Approach(start, end, shift);/// @function  Approach
+/// @param start
+/// @param  end
+/// @param  shift
+
+Converting GML script: ${project_dir}\scripts\OnGround\OnGround.gml
+Converted description /// @description  OnGround();/// @function  OnGround
+
+Converting GML script: ${project_dir}\scripts\PlaceMeetingException\PlaceMeetingException.gml
+Converted description /// @description PlaceMeetingException(x,y,thing,exception)/// @function PlaceMeetingException
+/// @param x
+/// @param y
+/// @param thing
+/// @param exception
+
+Converting GML script: ${project_dir}\scripts\PlatformCheck\PlatformCheck.gml
+Converted description /// @description  PlatformCheck();/// @function  PlatformCheck
+
+Converting GML script: ${project_dir}\scripts\PlaceMeetingSolid\PlaceMeetingSolid.gml
+Converted description /// @description PlaceMeetingSolid(x,y,or/and 0/1)/// @function PlaceMeetingSolid
+/// @param x
+/// @param y
+/// @param or/and 0/1
+
+Converting GML script: ${project_dir}\scripts\scMovement\scMovement.gml
+Converted description /// @description  Movement
+Converted string - line 12: 'Y' -> "Y"
+Converted string - line 14: 'X' -> "X"
+Converted string - line 15: 'X' -> "X"
+Converted string - line 16: 'X' -> "X"
+Converted string - line 18: 'Z' -> "Z"
+Converted string - line 19: 'Z' -> "Z"
+Converted string - line 21: 'Z' -> "Z"
+
+Converting GML script: ${project_dir}\scripts\scPlayerHitCheck\scPlayerHitCheck.gml
+Converted description /// @description Hit check
+
+Converting GML script: ${project_dir}\scripts\scPickup\scPickup.gml
+Converted description /// @description pickup(pick)/// @function pickup
+/// @param pick
+
+Converting GML script: ${project_dir}\scripts\scGetYThrow\scGetYThrow.gml
+Converted description /// @description scGetYThrow(facing)/// @function scGetYThrow
+/// @param facing
+
+Converting GML script: ${project_dir}\scripts\scPlayerSize\scPlayerSize.gml
+Converted description /// @description PlayerSize
+
+Converting GML script: ${project_dir}\objects\oPlayer\Create_0.gml
+Converted description /// @description  Variables
+
+Converting GML script: ${project_dir}\objects\oPlayer\Alarm_7.gml
+Converted description /// @description Jump Delay
+
+Converting GML script: ${project_dir}\objects\oPlayer\Alarm_6.gml
+Converted description /// @description FLY
+
+Converting GML script: ${project_dir}\objects\oPlayer\Alarm_5.gml
+Converted description /// @description End Spin Attack
+
+Converting GML script: ${project_dir}\objects\oPlayer\Alarm_4.gml
+Converted description /// @description Slowed fall
+
+Converting GML script: ${project_dir}\objects\oPlayer\Alarm_3.gml
+Converted description /// @description damage freeze
+
+Converting GML script: ${project_dir}\objects\oPlayer\Alarm_2.gml
+Converted description /// @description invincability frames
+
+Converting GML script: ${project_dir}\objects\oPlayer\Alarm_1.gml
+Converted description /// @description Sprint
+
+Converting GML script: ${project_dir}\objects\oPlayer\Alarm_0.gml
+Converted description /// @description Sticking
+
+Converting GML script: ${project_dir}\objects\oPlayer\Step_2.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oPlayer\Step_1.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oPlayer\Step_0.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oPlayer\Collision_1f222db5-a018-4f1d-adf1-05091c495ae1.gml
+Converted description /// @description coin
+
+Converting GML script: ${project_dir}\objects\oPlayer\Collision_982dafd8-5d88-4e32-9abe-f667497f97ac.gml
+Converted description /// @description Leaf Power
+
+Converting GML script: ${project_dir}\objects\oPlayer\Collision_faa9a66c-66b6-4f43-8349-66df2d7184d1.gml
+Converted description /// @description Super Player
+
+Converting GML script: ${project_dir}\objects\oPlayer\Collision_828ae796-2443-4388-88e0-a793cfa64d74.gml
+Converted description /// @description Hit check
+
+Converting GML script: ${project_dir}\objects\oPlayer\Draw_64.gml
+Converted description /// @description SPRINT BAR
+
+Converting GML script: ${project_dir}\objects\oPlayer\Draw_0.gml
+Converted description /// @description  Draw
+
+Converting GML script: ${project_dir}\objects\oGame\Alarm_0.gml
+Converted description /// @description  Turn off screenshake
+
+Converting GML script: ${project_dir}\objects\oGame\Step_2.gml
+Converted builtin - line 4: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 8: view_xview[0] += xcamo -> __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (xcamo) )
+Converted builtin - line 5: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted builtin - line 9: view_yview[0] += ycamo -> __view_set( e__VW.YView, 0, __view_get( e__VW.YView, 0 ) + (ycamo) )
+Converted builtin - line 4: view_wport[0] -> __view_get( e__VW.WPort, 0 )
+Converted builtin - line 5: view_hport[0] -> __view_get( e__VW.HPort, 0 )
+Converted description /// @description  Camera
+Converted builtin - line 4: view_xview[0] = max(0, min(__view_get( e__VW.XView, 0 ), room_width  - __view_get( e__VW.WPort, 0 -> __view_set( e__VW.XView, 0, max(0, min(__view_get( e__VW.XView, 0 ), room_width  - __view_get( e__VW.WPort, 0 )
+Converted builtin - line 5: view_yview[0] = max(0, min(__view_get( e__VW.YView, 0 ), room_height - __view_get( e__VW.HPort, 0 -> __view_set( e__VW.YView, 0, max(0, min(__view_get( e__VW.YView, 0 ), room_height - __view_get( e__VW.HPort, 0 )
+
+Converting GML script: ${project_dir}\objects\oGame\Step_0.gml
+Converted description /// @description  Debug
+Converted string - line 6: 'R' -> "R"
+Converted string - line 10: 'L' -> "L"
+Converted string - line 11: 'K' -> "K"
+
+Converting GML script: ${project_dir}\objects\oPlayerStats\Step_0.gml
+Converted description /// @description Player Size
+
+Converting GML script: ${project_dir}\objects\oPlayerStats\Draw_64.gml
+Converted description /// @description Draw the stats
+
+Converting GML script: ${project_dir}\objects\oParEntity\Step_2.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oParEntity\Step_1.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oParEnemy\Destroy_0.gml
+Converted description /// @description death affect
+
+Converting GML script: ${project_dir}\objects\oParEnemy\Step_2.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oParEnemy\Draw_0.gml
+Converted description /// @description sprite
+
+Converting GML script: ${project_dir}\objects\oMousePlat\Step_2.gml
+Converted description /// @description Move towards mouse
+
+Converting GML script: ${project_dir}\objects\oBrick\Create_0.gml
+Converted description /// @description init
+
+Converting GML script: ${project_dir}\objects\oBrick\Alarm_0.gml
+Converted description /// @description hit
+
+Converting GML script: ${project_dir}\objects\oBrick\Step_2.gml
+Converted description /// @description Fall
+
+Converting GML script: ${project_dir}\objects\oBrick\Step_0.gml
+Converted description /// @description Check for hit
+
+Converting GML script: ${project_dir}\objects\oFXBreak\Step_2.gml
+Converted description /// @description Movement 
+
+Converting GML script: ${project_dir}\objects\oFXBreak\Step_0.gml
+Converted description /// @description  Handle gravity and Friction
+
+Converting GML script: ${project_dir}\objects\oEnemyG\Create_0.gml
+Converted description /// @description  Variables
+
+Converting GML script: ${project_dir}\objects\oEnemyG\Destroy_0.gml
+Converted description /// @description Create Corpse
+
+Converting GML script: ${project_dir}\objects\oEnemyG\Step_0.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oEnemyKR\Create_0.gml
+Converted description /// @description  Variables
+
+Converting GML script: ${project_dir}\objects\oEnemyKR\Destroy_0.gml
+Converted description /// @description Make Shell
+
+Converting GML script: ${project_dir}\objects\oEnemyKR\Step_0.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oEnemyKG\Create_0.gml
+Converted description /// @description  Variables
+
+Converting GML script: ${project_dir}\objects\oEnemyKG\Destroy_0.gml
+Converted description /// @description Make Shell
+
+Converting GML script: ${project_dir}\objects\oEnemyKG\Step_0.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oShellR\Step_0.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oShell\Create_0.gml
+Converted description /// @description  Variables
+
+Converting GML script: ${project_dir}\objects\oShell\Destroy_0.gml
+Converted description /// @description only if not pickup
+
+Converting GML script: ${project_dir}\objects\oShell\Alarm_0.gml
+Converted description /// @description turn back into KG
+
+Converting GML script: ${project_dir}\objects\oShell\Step_2.gml
+Converted description /// @description Handle slopes and death
+
+Converting GML script: ${project_dir}\objects\oShell\Step_0.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oShell\Collision_fd85a21c-9392-4395-a94d-b6de57d1f1a8.gml
+Converted description /// @description Kill
+
+Converting GML script: ${project_dir}\objects\oShell\Collision_8eba31f5-3885-4541-bc52-5986c418541d.gml
+Converted description /// @description Kill
+
+Converting GML script: ${project_dir}\objects\oShell\Draw_0.gml
+Converted description /// @description Don't reflect
+
+Converting GML script: ${project_dir}\objects\oMushroom\Create_0.gml
+Converted description /// @description  Variables
+
+Converting GML script: ${project_dir}\objects\oMushroom\Step_0.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oLeaf\Create_0.gml
+Converted description /// @description Event Inherited & Variables
+
+Converting GML script: ${project_dir}\objects\oLeaf\Step_2.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oLeaf\Step_0.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oCoinEffect\Draw_0.gml
+Converted description /// @description Pause/FreezeCheck
+
+Converting GML script: ${project_dir}\objects\oCorpse\Step_2.gml
+Converted description /// @description Movement 
+
+Converting GML script: ${project_dir}\objects\oCorpse\Step_0.gml
+Converted description /// @description  Handle gravity and Friction
+
+Converting GML script: ${project_dir}\objects\oFlat\Alarm_0.gml
+Converted description /// @description End Destroy 
+
+Converting GML script: ${project_dir}\objects\crHorzontal\Create_0.gml
+Converted description /// @description defaults
+
+macOS icon ${options_dir}\mac\icons\icon512.png written out as 32-bit
+Windows NSIS Installer Script has been set to default due to changes in GameMaker Studio 2
+Game speed set to 60
+Added compatibility script 'action/action_kill_object.gml'
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script 'view/__view_get.gml'
+Added compatibility script 'view/__view_set.gml'
+Added compatibility script 'view/__view_set_internal.gml'
+Added compatibility script 'action/__init_action.gml'
+Added compatibility script 'view/__init_view.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script '__global_object_depths.gml'

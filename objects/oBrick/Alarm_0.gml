@@ -1,0 +1,3 @@
+/// @description hit
+canbehit=true;
+
