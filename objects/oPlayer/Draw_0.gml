@@ -41,10 +41,12 @@ if(ds_exists(trail,ds_type_list)){
 
 //Grapple
 if(isGrappling){
+	draw_set_color(c_gray);
+	draw_line_width(ropeX,ropeY,oGrappleSpot.x,oGrappleSpot.y,3);
 	draw_set_color(c_black);
 	draw_line_width(x,y,oGrappleSpot.x,oGrappleSpot.y,3);
 	draw_set_color(c_yellow);
-	draw_circle(ropeX,ropeY,10,false);
+	draw_circle(ropeX,ropeY,6,false);
 	draw_set_color(c_white);
 }
 
@@ -106,6 +108,7 @@ if (action == SKID && state != scHurt) {
     i=0;
 }
 */
+/*
 if(pickup!=0){
     if(pickup=="oShell"){//green
         if(facing==1) draw_sprite(sShell,0,bbox_right+2,bbox_bottom);
@@ -115,7 +118,7 @@ if(pickup!=0){
         else draw_sprite(sShellR,0,bbox_left-14,bbox_bottom);
     }
 }
-
+*/
 ///Max Speed
 
 color = c_white;

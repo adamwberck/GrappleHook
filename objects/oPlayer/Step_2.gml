@@ -212,13 +212,22 @@ landed = false;
 
 if(isGrappling && !isSwinging){
 	if(point_distance(x+vxNew,y+vyNew,oGrappleSpot.x,oGrappleSpot.y) >= ropeLength){
-		isSwinging = true;
 		y = ropeY;
 		x = ropeX;
+		var d = point_direction(x,y,x+vx,y+vy);
+		var sp = 0;//sqr(vy*vy+vx*vx);
+		ropeAngleVelocity = angle_difference(d,270) > 180 ? -.005*sp :.005*sp;
+		if(y>oGrappleSpot.y){
+			isSwinging = true;
+		}
+		vx=0;
+		vy=0;
 		exit;
 	}
 }
-
+if(isGrappling && y<=oGrappleSpot.y){
+	isSwinging = false;
+}
 
 
 

@@ -7,25 +7,38 @@ if(scPauseCheck()  == true) exit;
 isSwinging = isGrappling ? isSwinging : false;
 var lastx = vx; 
 var lasty = vy;
+
+scPlKeys();
+
 if(isGrappling){
-	if(distance_to_point(oGrappleSpot.x,oGrappleSpot.y) >= ropeLength){
-		isSwinging=true;
-		
-	}
-	if(!isSwinging){
+	ropeLength += (kDown - kUp) * 2;
+	ropeLength = max(0,ropeLength);
+	
+	if(!isSwinging){//Swinging is set in end step.
 		ropeAngle = point_direction(oGrappleSpot.x,oGrappleSpot.y,x,y);
 	}
+	
 	ropeX = round(oGrappleSpot.x + lengthdir_x(ropeLength, ropeAngle));
 	ropeY = round(oGrappleSpot.y + lengthdir_y(ropeLength, ropeAngle));
 }
 if(isSwinging){
-	scPlKeys();
 	var _ropeAngleAcceleration = -0.2 *dcos(ropeAngle);
+	_ropeAngleAcceleration += (kRight-kLeft) * 0.04;
+	
 	ropeAngleVelocity += _ropeAngleAcceleration;
 	ropeAngle += ropeAngleVelocity;
 	ropeAngleVelocity *= 0.99;
 	vx = ropeX - x;
-	vy = ropeY - y; 
+	vy = ropeY - y;
+	// Jump 
+	if (kJump) {
+		isGrappling=false;
+		if(sign(vx)==facing*-1){
+			vx+=(vx*.27);
+		}
+        var vxAbs = abs(vx);
+        vy = -(vxAbs/8 + 3 + 11/16);
+	} 
 }else{
 	script_execute(state);
 }

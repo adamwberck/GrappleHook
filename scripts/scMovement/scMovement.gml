@@ -1,7 +1,6 @@
 /// @description  Movement
 // Movement ///////////////////////////////////////////////////////////////////
 var prevAction = action;
-scPlKeys();
 // Apply the correct form of acceleration and friction
 var tempAccel, tempFric, tempSkid, tempVxMax;
 if(!oGame.oldSchool)
