@@ -14,6 +14,9 @@ hurt = false;
 global.freeze =false;
 global.paused =false;
 
+
+isGrappling=false;
+
 //Farore
 faroreCharge = false;
 faroreCount = 0;

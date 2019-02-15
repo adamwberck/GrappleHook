@@ -1,5 +1,6 @@
 /// @description Draw the stats
 
+/*
 draw_set_color(c_black);
 draw_set_font(Cooper);
 draw_text(30,20,string_hash_to_newline(oPlayer.x));
@@ -29,7 +30,7 @@ if(powerUp=Powers.farore){
 
 //Draw GUI Area
 
-
+/*
 draw_set_color(c_dkgray);
 //draw_roundrect(0,guiH-oGame.GUI_HEIGHT,guiW,guiH-16,false);
 draw_set_color(c_white);

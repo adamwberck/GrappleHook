@@ -226,7 +226,7 @@
             "Key": "18fdff4d-3d02-48d6-8e1b-b09ed05737f4",
             "Value": {
                 "id": "9e8ea2a7-3732-44f6-93ac-a915ab1969bb",
-                "resourcePath": "objects\\object55\\object55.yy",
+                "resourcePath": "objects\\oGrappleSpot\\oGrappleSpot.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -908,6 +908,14 @@
                 "id": "32e36892-d980-44f7-8145-8e018712a098",
                 "resourcePath": "objects\\oRail\\oRail.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6fa863ac-84cc-4ebc-87ba-b07880e17abb",
+            "Value": {
+                "id": "6de448dd-ada2-42a0-9ba8-1f6fbfdf65a6",
+                "resourcePath": "scripts\\scPlKeys\\scPlKeys.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1984,6 +1992,7 @@
         "1b4b987e-a76a-4243-b961-606e21256e99",
         "5bb993a1-04bb-462e-9807-c4be3985f14d",
         "9708d662-0604-4271-be90-b3792dc0df5f",
+        "6fa863ac-84cc-4ebc-87ba-b07880e17abb",
         "dc8debc7-4c59-47be-a3e3-8e1d451426e3",
         "1f10fe1d-5366-4c31-b6aa-3f4a3ccaa39e",
         "71859d10-ea41-4d58-b131-fb64fe213b43",

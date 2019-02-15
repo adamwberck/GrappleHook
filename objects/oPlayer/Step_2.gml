@@ -2,8 +2,26 @@
 if(scFreezeCheck() == true) exit;
 if(scPauseCheck()  == true) exit;
 
+///Grapple
+if(instance_exists(oGrappleSpot)){
+	if(kActionPress){
+		isGrappling=true;
+		ropeX = x;
+		ropeY = y;
+		ropeAngleVelocity = 0;
+		ropeAngle  = point_direction(oGrappleSpot.x,oGrappleSpot.y,x,y);
+		ropeLength = point_distance(oGrappleSpot.x,oGrappleSpot.y,x,y);
+	}
+	if(kActionRelease){
+		isGrappling=false;
+	}
+}else{
+	isGrappling=false;
+}
+
 ///Shell melee
 #region
+/*
 var en =0;
 if(pickup!=0){
 	//holding shell
@@ -27,10 +45,12 @@ if(pickup!=0){
         }
     }
 }
+*/
 #endregion
 
 ///Time
 #region
+/*
 if(oPlayerStats.powerUp==Powers.time){
 	if(kAction){
 		global.isPlaying = true;
@@ -45,11 +65,12 @@ if(oPlayerStats.powerUp==Powers.time){
 	global.isRecording = false;
 	global.time =0;
 }
+*/
 #endregion
-
 
 ///Farore
 #region
+/*
 if(oPlayerStats.powerUp=oPlayerStats.Powers.farore){
 	var createPortal = kAction2Press  && kUp;
 	var teleport = kAction2Press && !kUp;
@@ -88,6 +109,7 @@ if(oPlayerStats.powerUp=oPlayerStats.Powers.farore){
 	faroreCharge=false;
 	instance_destroy(portal);
 }
+*/
 #endregion
 
 ///Spin Attack disabled
@@ -137,6 +159,7 @@ if(en!=noone){
 
 ///Screen Wrap
 #region
+/*
 if(oPlayerStats.powerUp=oPlayerStats.Powers.screenWrap){
 	if(kAction2Press){
 		screenWrap=true;
@@ -170,15 +193,11 @@ if(oPlayerStats.powerUp=oPlayerStats.Powers.screenWrap){
 else{
 	screenWrap =false;
 }
+*/
 #endregion
 
 ///Movement with collision
 #region
-
-if(scRecording()){
-	exit;
-}
-
 
 // Handle sub-pixel movement
 cx += vx;
@@ -191,6 +210,18 @@ cy -= vyNew;
 jumped = false;
 landed = false;
 
+if(isGrappling && !isSwinging){
+	if(point_distance(x+vxNew,y+vyNew,oGrappleSpot.x,oGrappleSpot.y) >= ropeLength){
+		isSwinging = true;
+		y = ropeY;
+		x = ropeX;
+		exit;
+	}
+}
+
+
+
+
 //verticle movement
 repeat(abs(vyNew)) {
     if (!PlatformCheck()){
@@ -198,6 +229,10 @@ repeat(abs(vyNew)) {
         y += sign(vy);
     } else {
         vy = 0;
+		if(isGrappling){
+			ropeAngle = point_direction(oGrappleSpot.x,oGrappleSpot.y,x,y);
+			ropeAngleVelocity = 0 ;
+		}
         onGround = true;
         break;
     }
@@ -243,6 +278,10 @@ repeat(abs(vxNew)) {
     }
     if (!moved){
         vx = 0;
+		if(isGrappling){
+			ropeAngle = point_direction(oGrappleSpot.x,oGrappleSpot.y,x,y);
+			ropeAngleVelocity = 0 ;
+		}
         break;
     }
 }

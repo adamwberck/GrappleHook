@@ -4,10 +4,41 @@ if(scPauseCheck()  == true) exit;
 //show_message(object_index);
 
 ///State switch
-script_execute(state);
+isSwinging = isGrappling ? isSwinging : false;
+var lastx = vx; 
+var lasty = vy;
+if(isGrappling){
+	if(distance_to_point(oGrappleSpot.x,oGrappleSpot.y) >= ropeLength){
+		isSwinging=true;
+		
+	}
+	if(!isSwinging){
+		ropeAngle = point_direction(oGrappleSpot.x,oGrappleSpot.y,x,y);
+	}
+	ropeX = round(oGrappleSpot.x + lengthdir_x(ropeLength, ropeAngle));
+	ropeY = round(oGrappleSpot.y + lengthdir_y(ropeLength, ropeAngle));
+}
+if(isSwinging){
+	scPlKeys();
+	var _ropeAngleAcceleration = -0.2 *dcos(ropeAngle);
+	ropeAngleVelocity += _ropeAngleAcceleration;
+	ropeAngle += ropeAngleVelocity;
+	ropeAngleVelocity *= 0.99;
+	vx = ropeX - x;
+	vy = ropeY - y; 
+}else{
+	script_execute(state);
+}
+if(abs(lastx-vx)>10 or abs(lasty-vy)>10){
+	var d =9;
+	//show_error("hello",true);
+}
+
+
 
 ///Throw
-
+#region
+/*
 var canspawn = true;
 var drop=0;
 
@@ -52,5 +83,5 @@ if(kActionRelease && pickup != 0){
     pickup=0;
     
 }
-
-
+*/
+#endregion

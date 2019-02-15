@@ -38,13 +38,20 @@ if(ds_exists(trail,ds_type_list)){
 	}
 }
 
+
+//Grapple
+if(isGrappling){
+	draw_set_color(c_black);
+	draw_line_width(x,y,oGrappleSpot.x,oGrappleSpot.y,3);
+	draw_set_color(c_yellow);
+	draw_circle(ropeX,ropeY,10,false);
+	draw_set_color(c_white);
+}
+
+
 //Velocity Arrows
-draw_set_color(c_red);
-draw_arrow(x,y,x+(vx*10),y,7);
-draw_set_color(c_blue);
-draw_arrow(x,y,x,y+(vy*10),7);
-draw_set_color(c_green);
-draw_arrow(x,y,x+(vx*10),y+(vy*10),7);
+//draw_set_color(c_green);
+//draw_arrow(x,y,x+(vx*10),y+(vy*10),7);
 draw_set_color(c_white);
 
 
