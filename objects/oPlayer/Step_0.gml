@@ -11,15 +11,19 @@ var lasty = vy;
 scPlKeys();
 
 if(isGrappling){
-	ropeLength += (kDown - kUp) * 2;
-	ropeLength = max(0,ropeLength);
-	
 	if(!isSwinging){//Swinging is set in end step.
 		ropeAngle = point_direction(oGrappleSpot.x,oGrappleSpot.y,x,y);
 	}
+	ropeLength += (kDown - kUp) * 2;
+	ropeLength = max(0,ropeLength);
 	
 	ropeX = round(oGrappleSpot.x + lengthdir_x(ropeLength, ropeAngle));
 	ropeY = round(oGrappleSpot.y + lengthdir_y(ropeLength, ropeAngle));
+	
+	var breakRope = collision_line(x,y,oGrappleSpot.x,oGrappleSpot.y,oParSolid,false,false);
+	if(breakRope){
+		isGrappling = false;
+	}
 }
 if(isSwinging){
 	var _ropeAngleAcceleration = -0.2 *dcos(ropeAngle);

@@ -255,6 +255,14 @@
             }
         },
         {
+            "Key": "1d63c676-bff0-428f-b0a4-a252f0f270b3",
+            "Value": {
+                "id": "c4ed2d15-4d44-461a-84f6-66a61368c02c",
+                "resourcePath": "objects\\oBullet\\oBullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1de5e223-2bd3-4aca-9883-7dc3028bfc6d",
             "Value": {
                 "id": "a7823adb-fb82-4c43-8f2f-e2c1a7fc05b0",

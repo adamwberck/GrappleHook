@@ -2,17 +2,19 @@
 if(scFreezeCheck() == true) exit;
 if(scPauseCheck()  == true) exit;
 
+var myMouseX = mouse_x;
+var myMouseY = mouse_y;
+//Shot
+if(kShootPress){
+	var shootDir = point_direction(x,y,myMouseX,myMouseY);
+	if(instance_exists(oBullet)) then instance_destroy(oBullet);
+	var bullet = instance_create(x,y,oBullet);
+	bullet.dir = shootDir;
+}
+
 ///Grapple
 if(instance_exists(oGrappleSpot)){
-	if(kActionPress){
-		isGrappling=true;
-		ropeX = x;
-		ropeY = y;
-		ropeAngleVelocity = 0;
-		ropeAngle  = point_direction(oGrappleSpot.x,oGrappleSpot.y,x,y);
-		ropeLength = point_distance(oGrappleSpot.x,oGrappleSpot.y,x,y);
-	}
-	if(kActionRelease){
+	if(!kShoot){
 		isGrappling=false;
 	}
 }else{
